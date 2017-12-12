@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/d4"
+    android:background="@android:color/white"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/img_group"
+        android:layout_width="@dimen/d150"
+        android:layout_height="@dimen/d80"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dummy" />
+
+        <TextView
+            android:id="@+id/tv_group_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="NGO Group"
+            android:textColor="@color/text_dark_grey"
+            android:textSize="@dimen/fontSizeMedium"
+            android:layout_marginTop="@dimen/d8"
+            app:layout_constraintTop_toBottomOf="@+id/img_group" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_group_title">
+
+
+            <ImageView
+                android:layout_width="@dimen/d16"
+                android:layout_height="@dimen/d16"
+                android:layout_marginEnd="@dimen/d8"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_briefcase" />
+
+            <TextView
+                android:id="@+id/tv_job_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="10 Jobs Done"
+                android:textColor="@color/text_dark_grey"
+                android:textSize="@dimen/fontSizeSmall" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="Saudi"
+            android:textColor="@color/text_dark_grey"
+            android:textSize="@dimen/fontSizeSmall"
+            android:paddingBottom="@dimen/d4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v7.widget.CardView>

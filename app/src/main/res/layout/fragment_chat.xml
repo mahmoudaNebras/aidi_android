@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_chat_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        emojicon:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_chat"
+        android:layout_width="0dp"
+        android:layout_height="0dip"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rc_chat_users"
+        app:layout_constraintBottom_toTopOf="@+id/textView17" />
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+        android:layout_height="@dimen/d1"
+        android:layout_marginBottom="@dimen/d8"
+        app:layout_constraintBottom_toTopOf="@id/et_message"
+        android:id="@+id/textView17" />
+
+
+
+    <ImageButton
+        android:id="@+id/btn_smiles"
+        android:layout_width="@dimen/d30"
+        android:layout_height="@dimen/d30"
+        app:srcCompat="@drawable/ic_emoji"
+        android:scaleType="fitXY"
+        android:layout_marginStart="@dimen/d8"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/et_message"
+        app:layout_constraintTop_toTopOf="@+id/et_message"
+        emojicon:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_send"
+        android:layout_width="@dimen/d30"
+        android:layout_height="@dimen/d30"
+        app:srcCompat="@drawable/ic_send"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="@dimen/d18"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/et_message"
+        emojicon:layout_constraintStart_toEndOf="@id/btn_smiles"
+        app:layout_constraintTop_toTopOf="@+id/et_message"
+         />
+
+
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="0dip"
+        android:layout_height="37dp"
+        android:hint="Type a Message"
+        android:textColor="@color/text_dark_grey"
+        android:textColorHint="@color/text_grey"
+        android:layout_marginBottom="@dimen/d8"
+        android:gravity="center_vertical|end"
+        android:textAlignment="gravity"
+        android:paddingEnd="@dimen/d6"
+        android:textDirection="ltr"
+        android:layout_marginStart="@dimen/d8"
+        android:layout_marginEnd="@dimen/d8"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_send" />
+
+
+
+</android.support.constraint.ConstraintLayout>

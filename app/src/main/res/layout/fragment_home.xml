@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layoutDirection="ltr"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_top_groups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/d10"
+        android:layout_marginTop="@dimen/d8"
+        android:gravity="left|center_vertical"
+        android:text="Top Groups"
+        android:textColor="@color/text_dark_grey"
+        android:textSize="@dimen/fontSizeMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_top_groups"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d8"
+        android:layout_marginEnd="@dimen/d8"
+        android:layout_marginTop="@dimen/d8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_top_groups" />
+
+    <TextView
+        android:id="@+id/tv_rc_jobs_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/d10"
+        android:layout_marginTop="@dimen/d8"
+        android:gravity="left|center_vertical"
+        android:text="Recent Jobs"
+        android:textColor="@color/text_dark_grey"
+        android:textSize="@dimen/fontSizeMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rc_top_groups" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_recent_jobs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d8"
+        android:layout_marginEnd="@dimen/d8"
+        android:layout_marginTop="@dimen/d8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rc_jobs_title" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
